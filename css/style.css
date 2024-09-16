@@ -111,6 +111,9 @@ ul{
 .btn:hover{
     transform: scale(1.05s);
 }
+.shadow-dark{
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
+}
 /*aside*/
 .aside{
   width: 270px;
@@ -324,13 +327,49 @@ h3.my-profession{
     max-width: 50%;
     
 }
-
 .about .about-content .personal-info .info-item p{
     font-weight:600 ;
     padding: 10px 0;
     font-size: 16px;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
+}
+
+.about .about-content .personal-info .info-item p span{
+    font-weight:400 ;
+    color:var(--text-black-700);
+    margin-left: 4px;
+    display: inline-block;
+}
+.about .about-content .education,
+.about .about-content .experience{
+    flex:0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+}
+.about .about-content .education,
+.about .about-content .experience{
+    flex:0 0 50%;
+    max-width: 50%;
+    margin-top: 30px;
+}
+.about .about-content h3.title{
+    font-size: 24px;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+.about .about-content .timeline-box{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.about .about-content .timeline{
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+    width: 100%;
+    position: relative;
 }
 
 
