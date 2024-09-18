@@ -399,6 +399,75 @@ h3.my-profession{
     border-radius: 50%;
     background-color: var(--skin-color);
 }
+.about .about-content .timeline .timeline-date{
+    font-weight: 400;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--text-black-700);
+}
 
+.about .about-content .timeline .timeline-date .fa{
+    margin-right: 5px;
+}
 
+.about .about-content .timeline .timeline-title{
+    font-weight: 700;
+    font-size: 18px;
+    margin-bottom: 15px;
+    text-transform: capitalize;
+    color:var(--text-black-900);
+}
 
+.about .about-content .timeline .timeline-text{
+    line-height: 25px;
+    font-size: 16px;
+    text-align: justify;
+    color:(--text-black-700);
+}
+/*Presentacion del portafolio*/
+.portfolio .portfolio-content {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+    background-color: var(--bg-black-100);
+    padding: 30px 15px;
+    border: 1px solid var(--bg-black-50);
+    border-radius: 10px;
+}
+
+.portfolio .portfolio-content .portfolio-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.portfolio .portfolio-content .portfolio-text h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: var(--text-black-900);
+}
+
+.portfolio .portfolio-content .portfolio-text h3 span {
+    color: var(--skin-color);
+}
+
+.portfolio .portfolio-content .portfolio-text p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: var(--text-black-700);
+}
+
+.portfolio .portfolio-content button {
+    padding: 10px 20px;
+    background-color: var(--skin-color);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.portfolio .portfolio-content button:hover {
+    background-color: darken(var(--skin-color), 10%);
+}
