@@ -476,3 +476,66 @@ h3.my-profession{
     }
   }
   
+  /*Mi blogs*/
+  /* General Styles for Miblog Section */
+.miblog.section {
+    padding: 60px 0;
+    background-color: var(--bg-black-100);
+}
+
+.miblog .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.miblog .section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-black-900);
+    margin-bottom: 30px;
+}
+
+.miblog .portfolio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.miblog h3 {
+    font-size: 1.8rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+    color: var(--text-black-700);
+}
+
+.miblog .iframe-portfolio {
+    width: 100%;
+    height: 500px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .miblog .section-title {
+        font-size: 2rem;
+    }
+
+    .miblog h3 {
+        font-size: 1.5rem;
+    }
+
+    .miblog .iframe-portfolio {
+        height: 400px;
+    }
+}
+
+@media (max-width: 480px) {
+    .miblog .iframe-portfolio {
+        height: 300px;
+    }
+}
