@@ -267,7 +267,17 @@ h3.my-profession{
     max-width: 40%;
     text-align: center;
     position: relative;
+        box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+        padding: 10px; /* Añade un padding si es necesario */
+    
 }
+.home .home-img img {
+    margin: auto;
+    border-radius: 5px;
+    height: calc(400px - 20px); /* Ajusta la altura para considerar los bordes */
+    width: calc(100% - 20px); /* Ajusta el ancho para considerar los bordes */
+}
+
 /*bordes de la imagen*/
 .home-img::after{
     content: '';
@@ -278,6 +288,7 @@ h3.my-profession{
     border-right: 10px solid var(--skin-color);
     right: 20px;
     bottom: -40px;
+    
 }
 .home-img::before{
     content: '';
