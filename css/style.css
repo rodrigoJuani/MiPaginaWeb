@@ -330,35 +330,54 @@ h3.my-profession{
 .about .about-content .about-text h3 span{
    color: var(--skin-color);
 }
-.about .about-content .about-text p{
+.about .about-content .about-text p {
     font-size: 16px;
     line-height: 25px;
     color: var(--text-black-700);
 }
-.about .about-content .personal-info{
+
+.about .about-content .personal-info {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se ajusten */
     flex: 0 0 60%;
     max-width: 60%;
     margin-top: 40px;
 }
-.about .about-content .personal-info .info-item{
-    flex: 0 0 50%;
+
+.about .about-content .personal-info .info-item {
+    flex: 0 0 50%; /* Ocupa el 50% del ancho en pantallas grandes */
     max-width: 50%;
-    
+    box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho total */
 }
-.about .about-content .personal-info .info-item p{
-    font-weight:600 ;
+
+.about .about-content .personal-info .info-item p {
+    font-weight: 600;
     padding: 10px 0;
     font-size: 16px;
     color: var(--text-black-900);
     border-bottom: 1px solid var(--bg-black-50);
 }
 
-.about .about-content .personal-info .info-item p span{
-    font-weight:400 ;
-    color:var(--text-black-700);
+.about .about-content .personal-info .info-item p span {
+    font-weight: 400;
+    color: var(--text-black-700);
     margin-left: 4px;
     display: inline-block;
 }
+
+/* Media query para pantallas pequeñas */
+@media (max-width: 600px) {
+    .about .about-content .personal-info {
+        flex: 0 0 100%; /* Ocupa el 100% del ancho en pantallas pequeñas */
+        max-width: 100%;
+    }
+
+    .about .about-content .personal-info .info-item {
+        flex: 0 0 100%; /* Cada info-item ocupará el 100% del ancho */
+        max-width: 100%;
+    }
+}
+
 .about .about-content .education,
 .about .about-content .experience{
     flex:0 0 50%;
