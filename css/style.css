@@ -489,61 +489,34 @@ h3.my-profession{
 }
 
 /* Estilos de la sección de portafolio */
-.portfolio {
-    padding: 60px 0;
-}
-
-.portfolio-text {
-    text-align: center;
-    font-size: 18px;
-    color: var(--text-black-700);
-}
-
-/* Ajustar el iframe para que ocupe todo el espacio */
-.portfolio-iframe {
-    width: 100%;
-    height: 500px;
-    border: none;
-}
-
-/* Estilos para los elementos del portafolio */
-.portfolio-items {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Espacio entre los elementos */
+.portfolio-link {
+    text-decoration: none; /* Eliminar subrayado del enlace */
 }
 
 .portfolio-item {
-    width: 800px; /* Ancho fijo de 800px */
-    height: 40px; /* Altura fija de 40px */
-    margin: 15px; /* Espacio entre los elementos */
-    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el tamaño total */
+    width: 100%; /* Ancho completo para el elemento del portafolio */
+    height: 60px; /* Altura del elemento */
+    margin: 15px 0; /* Espacio entre los elementos */
     display: flex; /* Permite centrar contenido dentro del elemento */
     align-items: center; /* Centra el contenido verticalmente */
     justify-content: center; /* Centra el contenido horizontalmente */
     background-color: var(--bg-black-100); /* Color de fondo para visualización */
     border-radius: 10px; /* Bordes redondeados */
-    overflow: hidden; /* Oculta el desbordamiento */
+    cursor: pointer; /* Cambiar cursor al pasar el ratón */
+    transition: background-color 0.3s; /* Transición suave para el color de fondo */
 }
 
-/* Estilos para dispositivos móviles */
-@media (max-width: 768px) {
-    .portfolio-iframe {
-        height: 300px;
-    }
-
-    .portfolio-item {
-        width: 100%; /* Un elemento por fila en pantallas pequeñas */
-        height: 40px; /* Mantiene la altura de 40px */
-    }
+.portfolio-item:hover {
+    background-color: var(--bg-black-200); /* Color de fondo al pasar el ratón */
+}
+.portfolio-iframe {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    border: none; /* Sin borde */
+    border-radius: 10px; /* Bordes redondeados si lo deseas */
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual */
 }
 
-@media (max-width: 480px) {
-    .portfolio-item {
-        width: 100%; /* Un elemento por fila en pantallas pequeñas */
-        height: 40px; /* Mantiene la altura de 40px */
-    }
-}
 
 /* Mi blog */
 /* General Styles for Miblog Section */
