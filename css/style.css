@@ -8,6 +8,13 @@
     --text-black-700:#504e70;
     
 }
+body.dark{
+    --bg-black-900:#151515;
+    --bg-black-100:#222222;
+    --bg-black-50:#393939;
+    --text-black-900:#ffffff;
+    --text-black-700:#e9e9e9;
+}
 body{
     margin: 0;
     padding: 0;
@@ -433,7 +440,7 @@ h3.my-profession{
     line-height: 25px;
     font-size: 16px;
     text-align: justify;
-    color:(--text-black-700);
+    color:var(--text-black-700);
 }
 /*Presentacion del portafolio*/
 /* Ajustar el contenedor */
@@ -590,6 +597,7 @@ h3.my-profession{
     margin-bottom: 20px;
 }
 .contact-sub-title{
+    
     color:var(--skin-color);
     text-align: center;
     font-size: 15px;
@@ -611,7 +619,6 @@ h3.my-profession{
 .contact .contact-info-item h4{
     font-size: 18px;
     font-weight: 700;
-    color: var(--text-black-900);
     text-transform: capitalize;
     margin: 15px 0 5px;
 }

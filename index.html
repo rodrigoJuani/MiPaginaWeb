@@ -7,8 +7,15 @@
         <title>Document</title>
         <!--CSS files-->
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/skins/color-1.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+        <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
+        <link rel="stylesheet" href="css/skins/color-2.css" class="alternate-style" title="color-2" disabled>
+        <link rel="stylesheet" href="css/skins/color-3.css" class="alternate-style" title="color-3" disabled>
+        <link rel="stylesheet" href="css/skins/color-4.css" class="alternate-style" title="color-4" disabled>
+        <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
+        
+        <link rel="stylesheet" href="css/style-switcher.css">
     </head>
     <body>
         <!--MAin container start-->
@@ -22,11 +29,11 @@
                    <span></span> 
                 </div>
                 <ul class="nav">
-                    <li><a href="#" class="active"><i class="fa fa-home"></i>Inicio</a></li>
-                    <li><a href="#"><i class="fa fa-user"></i>Sobre mi</a></li>
-                    <li><a href="#"><i class="fa fa-list"></i>Mi blog</a></li>
-                    <li><a href="#"><i class="fa fa-briefcase"></i>Portafolio</a></li>
-                    <li><a href="#"><i class="fa fa-comments"></i>Contacto</a></li>
+                    <li><a href="#home" class="active"><i class="fa fa-home"></i>Inicio</a></li>
+                    <li><a href="#about" class="active"><i class="fa fa-user"></i>Sobre mi</a></li>
+                    <li><a href="#blog" class="active"><i class="fa fa-list"></i>Mi blog</a></li>
+                    <li><a href="#portfolio" class="active"><i class="fa fa-briefcase"></i>Portafolio</a></li>
+                    <li><a href="#contact" class="active"><i class="fa fa-comments"></i>Contacto</a></li>
                 </ul>
             </div>
             <!--aside end-->
@@ -34,18 +41,18 @@
          <!--Main content End-->
          <div class="main-content">
             <!--Home Section start-->
-            <section class="home section">
+            <section class="home section" id="home">
                 <div class="container">
                     <div class="row">
                         <div class="home-info padd-15">
                             <h3 class="hello">
-                                HOLA, Mi nombre es<span class="name">Rodrigo JP</span>
+                                HOLA, Mi nombre es <span class="name">Rodrigo JP</span>
                             </h3>
                             <h3 class="my-profession">
-                                  Soy desarrollador<span class="typing">principiante</span>
+                                  Soy desarrollador <span class="typing"> principiante</span>
                             </h3>
-                            <p>Sin experiencia</p>
-                            <a href="#contact" class="btn hire-me">aqui</a>
+                            <p>Tengo un conocimiento limitado sobre React, que es una biblioteca de JavaScript muy utilizada para construir interfaces de usuario en aplicaciones web. Sin embargo, tengo una base sólida en HTML y CSS, que son fundamentales para el desarrollo web. Además, tengo un nivel medio en programación con Java y C++, lo que me proporciona una buena comprensión de conceptos de programación más avanzados. A pesar de mi nivel actual en React, estoy muy interesado en aprender más sobre esta tecnología y mejorar mis habilidades. Mi objetivo es profundizar en los conceptos de React</p>
+                            <a href="#contact" class="btn hire-me">Contacto</a>
                         </div>
                         <div class="home-img padd-15">
                             <img src="./images/miFoto.jpg" alt="">
@@ -55,19 +62,19 @@
             </section>
             <!--Home Section end-->
             <!--about section strart-->
-            <section class="about section">
+            <section class="about section" id="about">
              <div class="container">
                 <div class="row">
                     <div class="section-title padd-15">
-                        <h2>About ne</h2>
+                        <h2>Sobre mi</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="about-content padd-15">
                         <div class="row">
                             <div class="about-text padd-15">
-                                <h3>IM alid rod and <span>developer</span></h3>
-                                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quis doloremque provident tempora minima dolores fugiat facere quia dolor ut asperiores, sit nisi ex libero ullam? Error cumque aperiam eius quo maxime eaque consectetur at ipsa deserunt alias sed consequatur architecto commodi eum dolorum, porro incidunt nesciunt qui? Sint, eius dolorum.</p>
+                                <h3>Como <span>me describo:</span></h3>
+                                <p>Me describiría como una persona apasionada por el cine. Me encanta sumergirme en diferentes historias y disfrutar de películas de todos los géneros. Tengo un talento especial para recordar muchas referencias cinematográficas, lo que siempre me permite hacer conexiones interesantes en conversaciones y compartir momentos divertidos con amigos. Además, el color rojo es uno de mis favoritos. Para mí, representa la energía y la pasión que siento por la vida. Me gusta llevarlo en mi ropa, por último, tengo un gran aprecio por el rock y el rock pop. La música de estos géneros me inspira y me acompaña en mis momentos más felices y también en los más reflexivos, </p>
                             </div>
                         </div>
                         <div class="row">
@@ -101,20 +108,12 @@
                                             <div class="timeline-item">
                                                 <div class="circle-dot"></div>
                                                 <h3 class="timeline-date">
-                                                    <i class="fa fa-calendar"></i>2013-2015
+                                                    <i class="fa fa-calendar"></i>2015-2022
                                                 </h3>
-                                                <h4 class="timeline-title">Master in computerScience</h4>
-                                                <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci quo labore optio fugiat provident nam, iusto voluptatem harum minima.</p>
+                                                <h4 class="timeline-title">Bachiller</h4>
+                                                <p class="timeline-text">Sali del colegio "Carmen Guzman de Mier1"</p>
                                             </div>
                                             <!--Time line item 1-->
-                                            <div class="timeline-item">
-                                                <div class="circle-dot"></div>
-                                                <h3 class="timeline-date">
-                                                    <i class="fa fa-calendar"></i>2013-2015
-                                                </h3>
-                                                <h4 class="timeline-title">Ayudante</h4>
-                                                <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci quo labore optio fugiat provident nam, iusto voluptatem harum minima.</p>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -130,17 +129,8 @@
                                                 <h3 class="timeline-date">
                                                     <i class="fa fa-calendar"></i>2013-2015
                                                 </h3>
-                                                <h4 class="timeline-title">Master in computerScience</h4>
-                                                <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci quo labore optio fugiat provident nam, iusto voluptatem harum minima.</p>
-                                            </div>
-                                            <!--Time line item 1-->
-                                            <div class="timeline-item">
-                                                <div class="circle-dot"></div>
-                                                <h3 class="timeline-date">
-                                                    <i class="fa fa-calendar"></i>2013-2015
-                                                </h3>
-                                                <h4 class="timeline-title">Ayudante</h4>
-                                                <p class="timeline-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam adipisci quo labore optio fugiat provident nam, iusto voluptatem harum minima.</p>
+                                                <h4 class="timeline-title">Ninguna</h4>
+                                                <p class="timeline-text">Poco conocimiento</p>
                                             </div>
                                         </div>
                                     </div>
@@ -148,7 +138,7 @@
                             </div>
                         </div>
                     </div>
-                    <section class="miblog section">
+                    <section class="miblog section" id="blog">
                         <div class="container">
                             <div class="row">
                                 <div class="section-title padd-15">
@@ -170,7 +160,7 @@
                     
                     
 <!-- Portfolio section -->
-<section class="portfolio section">
+<section class="portfolio section" id="portfolio">
     <div class="container">
         <div class="row">
             <div class="section-title padd-15">
@@ -189,11 +179,11 @@
         </div>
     </div>
 </section>
-<section class="contact section">
+<section class="contact section" id="contact">
         <div class="container">
             <div class="row">
                 <div class="section title padd-15">
-                    <h2>Mi contacto</h2>
+                    <h2 class="contact-title padd-15" >Mi contacto</h2>
                 </div>
             </div>
             <h3 class="contact-title padd-15">Interesado por lo que puedo hacer?</h3>
@@ -220,38 +210,37 @@
                     <div class="row">
                         <div class="form-item col-6 padd-15">
                             <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Name">
+                                <input type="text" class="form-control" placeholder="Nombre" id="name">
                             </div>
                         </div>
-                        
                         <div class="form-item col-6 padd-15">
                             <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Email">
+                                <input type="text" class="form-control" placeholder="Email" id="email">
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="form-item col-12 padd-15">
                             <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Subject">
+                                <input type="text" class="form-control" placeholder="Asunto" id="subject">
                             </div>
                         </div>
                     </div>
-                    <div class="row"></div>
+                    <div class="row">
                         <div class="form-item col-12 padd-15">
                             <div class="form-group">
-                                <textarea name="" class="form-control" id="" placeholder="Mensaje"></textarea>
+                                <textarea class="form-control" placeholder="Mensaje" id="message"></textarea>
                             </div>
                         </div>
                     </div>
-                    
-                    <div class="row"></div>
+                    <div class="row">
                         <div class="form-item col-12 padd-15">
-                                <button type="submit" class="btn">Enviar mensaje</button>
+                            <button type="button" class="btn" id="sendMessage">Enviar mensaje</button>
                         </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
 
@@ -260,9 +249,28 @@
             <!--Portafolio section star-->
             <!-- Portafolio section end -->
          </div>
-         <!--Main contener end-->
+            <!--Style swithwe start-->
+            <div class="style-switcher">
+                <div class="style-switcher-toggler s-icon">
+                    <i class="fas fa-cog fa-spin"></i>
+                </div>
+                <div class="day-night s-icon">
+                    <i class="fas fa-moon"></i>
+                </div>
+                <h4>Otros colores de fondo</h4>
+                <div class="colors">
+                    <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+                    <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+                    <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+                    <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+                    <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+                </div>
+            </div>
+            <!--Style swithwe end-->
          <!--Js files-->
             </div>
         <script src="js/script.js"></script>
+        <script src="js/style-switcher.js"></script>
+        
     </body>
 </html>
