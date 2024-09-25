@@ -107,7 +107,7 @@ ul{
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
-    color: white;
+    color: rgb(10, 0, 0);
     border-radius: 40px;
     display: inline-block;
     white-space: nowrap;
@@ -515,6 +515,12 @@ h3.my-profession{
     border: none; /* Sin borde */
     border-radius: 10px; /* Bordes redondeados si lo deseas */
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Sombra para un efecto visual */
+}
+.portfolio-text {
+    text-align: center;
+    font-size: 18px; /* Ajusta según sea necesario */
+    color: var(--skin-color);
+    margin-bottom: 20px; /* Espaciado inferior para separación */
 }
 
 
