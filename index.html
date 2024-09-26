@@ -6,7 +6,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
         <!--CSS files-->
+        
         <link rel="stylesheet" href="css/style.css">
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
         <link rel="stylesheet" href="css/skins/color-1.css" class="alternate-style" title="color-1" disabled>
@@ -138,6 +140,63 @@
                             </div>
                         </div>
                     </div>
+                    <!--Gustos-->
+                    <section class="miblog section" id="blog">
+                        <div class="container">
+                            <div class="row">
+                                <div class="section-title padd-15">
+                                    <h2>Musica y cantantes</h2>
+                                </div>
+                                <div class="gallery-container"> <!-- Nuevo contenedor para centrar la galería -->
+                                    <div class="gallery">
+                                        <input type="checkbox">
+                                        <img src="./images/banda1.png" alt="a forest after an apocalypse">
+                                        <img src="./images/banda2.png" alt="a waterfall and many rocks">
+                                        <img src="./images/banda3.avif" alt="a house on a mountain">
+                                        <img src="./images/cant.jpg" alt="some pink flowers">
+                                        <img src="./images/music.jpg" alt="big rocks with some trees">
+                                        <img src="./images/bones.jpg" alt="big rocks with some trees"><img src="./images/q.jpg" alt="big rocks with some trees">
+                                        <img src="./images/kiss.jpg" alt="big rocks with some trees">
+                                        <img src="./images/asking.jpg" alt="big rocks with some trees">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!--PelisAndSeries-->
+                    <section class="gustos section" id="gustos">
+                        <div class="container">
+                            <div class="row">
+                                <div class="section-title padd-15" style="background-color: rgb(30, 99, 220);">
+                                    <h2>Pelis y series favoritas</h2> 
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="gustos-content padd-15">
+                                    
+                                    <div class="group padd-35">
+                                        <div class="item">
+                                            <img src="./images/asking.jpg" alt="Gusto 1">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./images/banda3.avif" alt="Gusto 2">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./images/cant.jpg" alt="Gusto 3">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./images/banda3.avif" alt="Gusto 4">
+                                        </div>
+                                        <div class="item">
+                                            <img src="./images/banda1.png" alt="Gusto 5">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    
+                    
                     <section class="miblog section" id="blog">
                         <div class="container">
                             <div class="row">
@@ -277,6 +336,33 @@
             </div>
         <script src="js/script.js"></script>
         <script src="js/style-switcher.js"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script> <!-- Asegúrate de incluir GSAP -->
+    <script>
+        const items = document.querySelectorAll('#gustos .item')
+
+        const expand = (item, i) => {
+            items.forEach((it, ind) => {
+                if (i === ind) return
+                it.clicked = false
+            })
+            gsap.to(items, {
+                width: item.clicked ? '15vw' : '8vw',
+                duration: 2,
+                ease: 'elastic(1, .6)'
+            })
+            
+            item.clicked = !item.clicked
+            gsap.to(item, {
+                width: item.clicked ? '42vw' : '15vw',
+                duration: 2.5,
+                ease: 'elastic(1, .3)'
+            })
+        }
+
+        items.forEach((item, i) => {
+            item.clicked = false
+            item.addEventListener('click', () => expand(item, i))
+        })
+    </script> 
     </body>
 </html>
