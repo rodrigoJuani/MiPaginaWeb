@@ -593,7 +593,7 @@ h3.my-profession{
     display: flex;
     flex-direction: column; /* Asegura que el contenido se alinee verticalmente */
     margin: 0;
-    background: linear-gradient(135deg, #0524ee, #0c0429);
+    background: linear-gradient(135deg, #060607, #0c0429);
     align-items: center; /* Centra horizontalmente los elementos */
     justify-content: center; /* Centra verticalmente los elementos */
     user-select: none;
