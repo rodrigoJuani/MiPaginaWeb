@@ -553,8 +553,6 @@ body.dark .gallery-container {
     background: #670505; /* Color de fondo en modo oscuro */
 }
 
-/* Resto de tu CSS */
-
   .gallery {
     --s: 130px; /* Controla el tamaño de las imágenes */
     display: grid;
