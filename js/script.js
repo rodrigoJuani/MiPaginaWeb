@@ -1,30 +1,19 @@
 
 /*Carrusel */
 let currentIndex = 0;
+const images = document.querySelectorAll('.carousel-images img');
 
 function showSlide(index) {
-    const slides = document.querySelectorAll('.carousel-images img'); // Select all images
-    const totalSlides = slides.length;
-
-    // Ensure the index is within the bounds of the slides
-    if (index >= totalSlides) {
-        currentIndex = 0; // Loop back to the first slide
+    if (index >= images.length) {
+        currentIndex = 0;
     } else if (index < 0) {
-        currentIndex = totalSlides - 1; // Loop back to the last slide
+        currentIndex = images.length - 1;
     } else {
-        currentIndex = index; // Update current index
+        currentIndex = index;
     }
-
-    // Hide all slides and show the active one
-    slides.forEach((slide, i) => {
-        slide.style.display = (i === currentIndex) ? 'block' : 'none'; // Show only the active slide
-    });
+    const offset = -currentIndex * 100; // Mueve el carrusel
+    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
 }
-
-// Initialize the first slide as active
-document.addEventListener('DOMContentLoaded', () => {
-    showSlide(currentIndex);
-});
 
 function nextSlide() {
     showSlide(currentIndex + 1);

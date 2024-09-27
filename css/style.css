@@ -682,39 +682,33 @@ body.dark .gallery-container {
 }
 
 /* Estilo para las imágenes */
-.carousel {
+.carousel-section .carousel {
     position: relative;
-    width: 100%; /* Ajuste para ocupar todo el ancho disponible */
-    max-width: 800px; /* Limita el tamaño máximo para mejor responsividad */
+    width: 100%;
+    max-width: 800px;
+    height: auto;
     margin: auto;
     overflow: hidden;
-    border-radius: 15px; /* Borde redondeado para darle un toque moderno */
-    background-color: var(--bg-black-100); /* Usa el color de fondo de tu esquema */
-    padding: -9px 9px; /* Ajuste para la altura superior e inferior de 2px */
+    border-radius: 15px;
+    background-color: var(--bg-black-100);
+    padding:-100px -99px;
 }
 
-.carousel-images {
+.carousel-section .carousel-images {
     display: flex;
-    transition: transform 0.5s ease;
-    will-change: transform; /* Optimización para animaciones */
-    flex-wrap: nowrap; /* Evita que las imágenes se apilen verticalmente */
-    overflow-x: auto;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+    scroll-snap-type: x mandatory; /* Ensures one image snaps into view */
 }
 
-.carousel-images img {
-    width: 100%; /* Ajuste para que las imágenes ocupen todo el ancho del contenedor */
-    height: 300px; /* Altura fija para mantener el tamaño uniforme */
-    object-fit: contain; /* Asegura que las imágenes se ajusten bien sin deformarse */
-    border-style: none;
-    display: none; /* Oculta todas las imágenes por defecto */
-    flex-shrink: 0; /* Evita que las imágenes se reduzcan de tamaño */
+.carousel-section .carousel-images img {
+    width: 100%; /* Image takes full width of container */
+    height: 43vh; /* Image takes full height of the viewport */
+    object-fit: contain; /* Ensures the whole image is shown without being cropped */
+    flex-shrink: 0; /* Prevents shrinking */
 }
 
-.carousel-images img.active {
-    display: block; /* Solo muestra la imagen activa */
-}
-
-.carousel-buttons {
+.carousel-section .carousel-buttons {
     position: absolute;
     top: 50%;
     width: 100%;
@@ -724,32 +718,50 @@ body.dark .gallery-container {
     z-index: 2;
 }
 
-.button {
-    background-color: rgba(255, 255, 255, 0.7);
+.carousel-section .button {
+    background-color: rgba(213, 203, 203, 0.7);
     border: none;
     cursor: pointer;
     padding: 10px;
-    border-radius: 50%; /* Botones redondeados para un diseño más limpio */
-    font-size: 24px; /* Tamaño adecuado para hacer los botones visibles */
+    border-radius: 50%;
+    font-size: 24px;
     transition: background-color 0.3s ease;
 }
 
-.button:hover {
-    background-color: rgba(255, 255, 255, 1); /* Efecto hover para mejor interacción */
+.carousel-section .button:hover {
+    background-color: rgba(255, 255, 255, 1);
 }
-@media (max-width: 768px) {
-    .carousel-images {
-        display: flex;
-        flex-direction: row;
-        overflow-x: scroll; /* Desplazamiento horizontal en móviles */
-        scroll-snap-type: x mandatory; /* Permite un deslizamiento suave */
-    }
 
-    .carousel-images img {
+/* Adjustments for small screens */
+@media (max-width: 768px) {
+    .carousel-section .carousel {
         width: 100%;
         height: auto;
     }
+
+    .carousel-section .carousel-images {
+        flex-direction: row;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory; /* Ensures images snap into view one at a time */
+    }
+    .carousel-section .carousel-images img {
+        width: 100vw; /* Full width of the viewport */
+        height: 25vh; /* Full height of the viewport */
+        object-fit: contain; /* Image is fully contained without cropping */
+        margin: 0 auto;
+    }
+
+    .carousel-section .button {
+        padding: 6px;
+        font-size: 18px;
+    }
+
+    .carousel-section .carousel-buttons {
+        width: 100%;
+        top: 45%;
+    }
 }
+
 
 
 
