@@ -697,6 +697,8 @@ body.dark .gallery-container {
     display: flex;
     transition: transform 0.5s ease;
     will-change: transform; /* Optimización para animaciones */
+    flex-wrap: nowrap; /* Evita que las imágenes se apilen verticalmente */
+    overflow-x: auto;
 }
 
 .carousel-images img {
@@ -705,6 +707,7 @@ body.dark .gallery-container {
     object-fit: contain; /* Asegura que las imágenes se ajusten bien sin deformarse */
     border-style: none;
     display: none; /* Oculta todas las imágenes por defecto */
+    flex-shrink: 0; /* Evita que las imágenes se reduzcan de tamaño */
 }
 
 .carousel-images img.active {
@@ -735,26 +738,16 @@ body.dark .gallery-container {
     background-color: rgba(255, 255, 255, 1); /* Efecto hover para mejor interacción */
 }
 @media (max-width: 768px) {
-    .carousel {
-        width: 100%;
-        height: auto; /* Ajusta la altura para pantallas pequeñas */
+    .carousel-images {
+        display: flex;
+        flex-direction: row;
+        overflow-x: scroll; /* Desplazamiento horizontal en móviles */
+        scroll-snap-type: x mandatory; /* Permite un deslizamiento suave */
     }
 
     .carousel-images img {
-        height: auto; /* Permite que las imágenes ajusten su altura automáticamente */
-        object-fit: cover; /* Mantiene la proporción de las imágenes */
-        width: 100%; /* Asegura que ocupen el ancho completo */
-    }
-
-    .carousel-buttons {
-        /* Ajustes de los botones para pantallas pequeñas */
-        font-size: 18px; /* Tamaño reducido de los botones */
-        padding: 8px;
-    }
-
-    .button {
-        padding: 8px; /* Ajusta el tamaño de los botones */
-        font-size: 18px;
+        width: 100%;
+        height: auto;
     }
 }
 
