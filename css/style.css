@@ -735,16 +735,29 @@ body.dark .gallery-container {
     background-color: rgba(255, 255, 255, 1); /* Efecto hover para mejor interacción */
 }
 @media (max-width: 768px) {
-    .carrusel {
-        /* Ajustes específicos para pantallas pequeñas */
+    .carousel {
         width: 100%;
-        height: auto; /* O ajusta la altura según sea necesario */
+        height: auto; /* Ajusta la altura para pantallas pequeñas */
     }
-    .carrusel .item {
-        /* Cambia el tamaño de los elementos del carrusel */
-        flex: 1 1 100%; /* Hacer que cada ítem ocupe todo el ancho */
+
+    .carousel-images img {
+        height: auto; /* Permite que las imágenes ajusten su altura automáticamente */
+        object-fit: cover; /* Mantiene la proporción de las imágenes */
+        width: 100%; /* Asegura que ocupen el ancho completo */
+    }
+
+    .carousel-buttons {
+        /* Ajustes de los botones para pantallas pequeñas */
+        font-size: 18px; /* Tamaño reducido de los botones */
+        padding: 8px;
+    }
+
+    .button {
+        padding: 8px; /* Ajusta el tamaño de los botones */
+        font-size: 18px;
     }
 }
+
 
 
   
