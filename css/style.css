@@ -269,44 +269,55 @@ h3.my-profession{
     font-size: 20px;
     color: var(--text-black-700);
 }
-.home .home-img{
+.home .home-img {
     flex: 0 0 40%;
     max-width: 40%;
     text-align: center;
     position: relative;
-        box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
-        padding: 10px; /* Añade un padding si es necesario */
-    
+    box-sizing: border-box; /* Incluye el padding y el borde en el tamaño total */
+    padding: 10px; /* Añade un padding si es necesario */
 }
+
 .home .home-img img {
-    margin: auto;
     border-radius: 5px;
     height: calc(400px - 20px); /* Ajusta la altura para considerar los bordes */
     width: calc(100% - 20px); /* Ajusta el ancho para considerar los bordes */
+    display: block; /* Asegura que no haya espacio adicional alrededor */
+    object-fit: cover; /* Asegura que la imagen cubra completamente el área */
+    margin: 0; /* Eliminar margin */
 }
 
-/*bordes de la imagen*/
-.home-img::after{
+/* Bordes de la imagen */
+.home .home-img::after {
     content: '';
     position: absolute;
-    height: 80px;
-    width: 80px;
+    height: 60px;
+    width: 60px;
     border-bottom: 10px solid var(--skin-color);
     border-right: 10px solid var(--skin-color);
-    right: 20px;
-    bottom: -40px;
-    
+    right: -20px; /* Ajuste del borde derecho */
+    bottom: 70px;
 }
-.home-img::before{
+
+.home .home-img::before {
     content: '';
     position: absolute;
     height: 80px;
-    width: 80px;
+    width: 70px;
     border-top: 10px solid var(--skin-color);
     border-left: 10px solid var(--skin-color);
-    left: -20px;
-    top:  -40px;
+    left: -30px; /* Ajuste del borde izquierdo */
+    top: -40px;
 }
+
+.home .home-img img {
+    margin: auto;
+    border-radius: 5px;
+    height: 400px;
+    display: block; /* Asegura que no haya espacio adicional en la imagen */
+    width: auto; /* Ajusta la imagen proporcionalmente */
+}
+
 .home .home-img img{
     margin:auto;
     border-radius: 5px;

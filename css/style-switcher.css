@@ -1,3 +1,21 @@
+.color-change-message {
+    position: fixed; /* Permite que el mensaje esté en una posición fija */
+    top: 20px; /* Distancia desde la parte superior */
+    right: 20px; /* Distancia desde la derecha */
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333; /* Color del texto */
+    text-align: center; /* Centrar texto */
+    font-size: 14px; /* Tamaño de fuente */
+    z-index: 1000; /* Asegura que esté por encima de otros elementos */
+    transition: opacity 0.5s; /* Añade una transición suave */
+    opacity: 0; /* Comienza como invisible */
+    pointer-events: none; /* Evita interacciones con el mensaje */
+}
+
+
 .style-switcher{
     position: fixed;
     right: 0;
