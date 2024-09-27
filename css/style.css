@@ -724,6 +724,17 @@ body.dark .gallery-container {
 .button:hover {
     background-color: rgba(255, 255, 255, 1); /* Efecto hover para mejor interacción */
 }
+@media (max-width: 768px) {
+    .carrusel {
+        /* Ajustes específicos para pantallas pequeñas */
+        width: 100%;
+        height: auto; /* O ajusta la altura según sea necesario */
+    }
+    .carrusel .item {
+        /* Cambia el tamaño de los elementos del carrusel */
+        flex: 1 1 100%; /* Hacer que cada ítem ocupe todo el ancho */
+    }
+}
 
 
   
