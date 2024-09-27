@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/skins/color-5.css" class="alternate-style" title="color-5" disabled>
         
         <link rel="stylesheet" href="css/style-switcher.css">
+
     </head>
     <body>
         <!--MAin container start-->
@@ -33,9 +34,11 @@
                 <ul class="nav">
                     <li><a href="#home" class="active"><i class="fa fa-home"></i>Inicio</a></li>
                     <li><a href="#about" class="active"><i class="fa fa-user"></i>Sobre mi</a></li>
+                    <li><a href="#favoritos" class="active"><i class="fa fa-star"></i>
+                        </>Favoritos</a></li>
                     <li><a href="#blog" class="active"><i class="fa fa-list"></i>Mi blog</a></li>
                     <li><a href="#portfolio" class="active"><i class="fa fa-briefcase"></i>Portafolio</a></li>
-                    <li><a href="#contact" class="active"><i class="fa fa-comments"></i>Contacto</a></li>
+                    
                 </ul>
             </div>
             <!--aside end-->
@@ -140,8 +143,9 @@
                             </div>
                         </div>
                     </div>
+                    
                     <!--Gustos-->
-                    <section class="miblog section" id="blog">
+                    <section class="MusicFa section" id="favoritos">
                         <div class="container">
                             <div class="row">
                                 <div class="section-title padd-15">
@@ -155,7 +159,7 @@
                                         <img src="./images/banda3.avif" alt="a house on a mountain">
                                         <img src="./images/cant.jpg" alt="some pink flowers">
                                         <img src="./images/music.jpg" alt="big rocks with some trees">
-                                        <img src="./images/bones.jpg" alt="big rocks with some trees"><img src="./images/q.jpg" alt="big rocks with some trees">
+                                        <img src="./images/bones.jpg" alt="big rocks with some trees"><img src="./images/q.png" alt="big rocks with some trees">
                                         <img src="./images/kiss.jpg" alt="big rocks with some trees">
                                         <img src="./images/asking.jpg" alt="big rocks with some trees">
                                     </div>
@@ -167,34 +171,32 @@
                     <section class="gustos section" id="gustos">
                         <div class="container">
                             <div class="row">
-                                <div class="section-title padd-15" style="background-color: rgb(30, 99, 220);">
+                                <div class="section-title padd-1">
                                     <h2>Pelis y series favoritas</h2> 
                                 </div>
-                            </div>
-                            <div class="row">
-                                <div class="gustos-content padd-15">
-                                    
-                                    <div class="group padd-35">
-                                        <div class="item">
-                                            <img src="./images/asking.jpg" alt="Gusto 1">
-                                        </div>
-                                        <div class="item">
-                                            <img src="./images/banda3.avif" alt="Gusto 2">
-                                        </div>
-                                        <div class="item">
-                                            <img src="./images/cant.jpg" alt="Gusto 3">
-                                        </div>
-                                        <div class="item">
-                                            <img src="./images/banda3.avif" alt="Gusto 4">
-                                        </div>
-                                        <div class="item">
-                                            <img src="./images/banda1.png" alt="Gusto 5">
-                                        </div>
+                                <div class="carousel">
+                                    <div class="carousel-images">
+                                        <img src="./images/banda1.png" alt="Image 1">
+                                        <img src="./images/bones.jpg" alt="Image 2">
+                                        <img src="./images/kiss.jpg" alt="Image 3">
+                                        
+                                        <img src="./images/banda1.png" alt="Image 3">
+                                        
+                                        <img src="./images/music.jpg" alt="Image 3">
+                                        
+                                        <img src="./images/kiss.jpg" alt="Image 3">
+                                        
+                                        <img src="./images/bones.jpg" alt="Image 3">
+                                    </div>
+                                    <div class="carousel-buttons">
+                                        <button class="button" onclick="prevSlide()">❮</button>
+                                        <button class="button" onclick="nextSlide()">❯</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </section>
+                    
                     
                     
                     <section class="miblog section" id="blog">
@@ -219,7 +221,7 @@
                     
                     
 <!-- Portfolio section -->
-<section class="portfolio section" id="portfolio">
+                    <section class="portfolio section" id="portfolio">
     <div class="container">
         <div class="row">
             <div class="section-title padd-15">
@@ -244,70 +246,7 @@
     </div>
 </section>
 
-<section class="contact section" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="section title padd-15">
-                    <h2 class="contact-title padd-15" >Mi contacto</h2>
-                </div>
-            </div>
-            <h3 class="contact-title padd-15">Interesado por lo que puedo hacer?</h3>
-            <h4 class="contact-sub-title padd-15">Contactame</h4>
-            <div class="row">
-                <!--Contact info item-->
-                <div class="contact-info-item padd-15">
-                    <div class="icon"><i class="fa fa-phone"></i></div>
-                    <h4>Cel</h4>
-                    <p>+591 60412466</p>
-                </div>
-                <!--Contact info item-->
-                <div class="contact-info-item padd-15">
-                    <div class="icon"><i class="fa fa-envelope"></i></div>
-                    <h4>emamil</h4>
-                    <p>junquinapokar</p>
-                </div>
-            </div>
-            
-            <h3 class="contact-title padd-15">Enviame un mensaje</h3>
-            <h4 class="contact-sub-title padd-15">LLena el form para contactarme</h4>
-            <div class="row">
-                <div class="contact-form padd-15">
-                    <div class="row">
-                        <div class="form-item col-6 padd-15">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Nombre" id="name">
-                            </div>
-                        </div>
-                        <div class="form-item col-6 padd-15">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Email" id="email">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-item col-12 padd-15">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Asunto" id="subject">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-item col-12 padd-15">
-                            <div class="form-group">
-                                <textarea class="form-control" placeholder="Mensaje" id="message"></textarea>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-item col-12 padd-15">
-                            <button type="button" class="btn" id="sendMessage">Enviar mensaje</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-    </section>
+              
 
                 </div>
              </div>
@@ -336,33 +275,7 @@
             </div>
         <script src="js/script.js"></script>
         <script src="js/style-switcher.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script> <!-- Asegúrate de incluir GSAP -->
-    <script>
-        const items = document.querySelectorAll('#gustos .item')
-
-        const expand = (item, i) => {
-            items.forEach((it, ind) => {
-                if (i === ind) return
-                it.clicked = false
-            })
-            gsap.to(items, {
-                width: item.clicked ? '15vw' : '8vw',
-                duration: 2,
-                ease: 'elastic(1, .6)'
-            })
-            
-            item.clicked = !item.clicked
-            gsap.to(item, {
-                width: item.clicked ? '42vw' : '15vw',
-                duration: 2.5,
-                ease: 'elastic(1, .3)'
-            })
-        }
-
-        items.forEach((item, i) => {
-            item.clicked = false
-            item.addEventListener('click', () => expand(item, i))
-        })
-    </script> 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script> <!-- PAraimg-->
+        
     </body>
 </html>

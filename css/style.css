@@ -523,15 +523,27 @@ h3.my-profession{
     margin-bottom: 20px; /* Espaciado inferior para separación */
 }
 
-/*Gustos*/
+/*Music favorita*/
+/* Estilos para el modo oscuro con degradado */
+.dark .MusicFa .container {
+    background: linear-gradient(to bottom, #020d22, #1b0224); /* Degradado oscuro */
+}
+
+
 .gallery-container {
     margin: 0;
     min-height: 100vh;
     display: grid;
     place-content: center;
-    background: #dee1fc;
-  }
-  
+    background: #98a1f1; /* Color por defecto */
+    }
+
+body.dark .gallery-container {
+    background: #670505; /* Color de fondo en modo oscuro */
+}
+
+/* Resto de tu CSS */
+
   .gallery {
     --s: 130px; /* Controla el tamaño de las imágenes */
     display: grid;
@@ -588,44 +600,120 @@ h3.my-profession{
     --b: 70%;
   }
 /*Pelis y series*/
-.gustos {
-    height: 100vh; /* Específico para la sección gustos */
+/* Importar la fuente */
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@700&display=swap');
+
+/* Aplicar estilos solo dentro de la sección #gustos */
+#gustos {
+  font-family: 'Courier Prime', monospace;
+  background-color: #fff;
+  background: linear-gradient(0deg, rgba(0, 0, 200, 0.1), rgba(0, 0, 200, 0)),
+              linear-gradient(120deg, rgba(50, 150, 100, 0.2), rgba(0, 0, 100, 0));
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Estilos para el contenedor dentro de #gustos */
+#gustos .container {
+  position: relative;
+  width: 80vmin;
+  height: 80vmin;
+  max-height: 600px;
+  max-width: 600px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+/* Aplicar sombras solo dentro de #gustos */
+#gustos .shadow {
+  box-shadow:
+    0 2.8px 2.2px rgba(249, 248, 248, 0.02),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.028),
+    0 12.5px 10px rgba(0, 0, 0, 0.035),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.042),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.05),
+    0 100px 80px rgba(0, 0, 0, 0.07);
+}
+
+/* Estilos para el div con id "app" */
+#gustos #app {
+  position: relative;
+}
+
+/* Estilos para imágenes y tabs dentro de #gustos */
+#gustos .image, #gustos .tabs {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#gustos .tabs {
+  z-index: 100;
+}
+
+/* Estilo para las imágenes */
+.carousel {
+    position: relative;
+    width: 100%; /* Ajuste para ocupar todo el ancho disponible */
+    max-width: 800px; /* Limita el tamaño máximo para mejor responsividad */
+    margin: auto;
+    overflow: hidden;
+    border-radius: 15px; /* Borde redondeado para darle un toque moderno */
+    background-color: var(--bg-black-100); /* Usa el color de fondo de tu esquema */
+    padding: -9px 9px; /* Ajuste para la altura superior e inferior de 2px */
+}
+
+.carousel-images {
     display: flex;
-    flex-direction: column; /* Asegura que el contenido se alinee verticalmente */
-    margin: 0;
-    background: linear-gradient(135deg, #060607, #0c0429);
-    align-items: center; /* Centra horizontalmente los elementos */
-    justify-content: center; /* Centra verticalmente los elementos */
-    user-select: none;
+    transition: transform 0.5s ease;
+    will-change: transform; /* Optimización para animaciones */
 }
 
-.group {
-    text-align: center; /* Centra el texto dentro del grupo */
-    white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
-    overflow: hidden; /* Oculta el contenido que desborda */
+.carousel-images img {
+    width: 100%; /* Ajuste para que las imágenes ocupen todo el ancho del contenedor */
+    height: 300px; /* Altura fija para mantener el tamaño uniforme */
+    object-fit: contain; /* Asegura que las imágenes se ajusten bien sin deformarse */
+    border-style: none;
+    display: none; /* Oculta todas las imágenes por defecto */
 }
 
-.item {
-    width: 15vw; /* Ajusta el tamaño según tus necesidades */
-    height: 75vh; /* Ajusta el tamaño según tus necesidades */
-    margin: 1vw; /* Margen alrededor de cada item */
-    border-radius: 3vw; /* Bordes redondeados */
-    display: inline-block; /* Hace que cada item sea un bloque en línea */
-    cursor: pointer; /* Cambia el cursor al pasar sobre el item */
+.carousel-images img.active {
+    display: block; /* Solo muestra la imagen activa */
 }
 
-.item img {
-    width: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-    height: 100%; /* Asegura que la imagen ocupe todo el contenedor */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-    border-radius: 3vw; /* Mismo radio que el contenedor */
+.carousel-buttons {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    z-index: 2;
 }
 
-/* Opcional: Estilos para manejar el hover o el click en los items */
-.item:hover {
-    transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el mouse */
-    transition: transform 0.3s; /* Transición suave */
+.button {
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%; /* Botones redondeados para un diseño más limpio */
+    font-size: 24px; /* Tamaño adecuado para hacer los botones visibles */
+    transition: background-color 0.3s ease;
 }
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 1); /* Efecto hover para mejor interacción */
+}
+
 
   
 /* Mi blog */
@@ -692,80 +780,7 @@ h3.my-profession{
     }
 }
 /*Contact*/
-.contact-title{
-    color:var(--skin-color);
-    text-align: center;
-    font-size: 25px;
-    margin-bottom: 20px;
-}
-.contact-sub-title{
-    
-    color:var(--skin-color);
-    text-align: center;
-    font-size: 15px;
-    margin-bottom: 60px;
-}
-.contact .contact-info-item{
-    flex: 0 0 25;
-    max-width: 25%;
-    text-align: center;
-    margin-bottom: 60px;
-}
-.contact .contact-info-item .icon{
-    display: inline-block;
-}
-.contact .contact-info-item .icon .fa{
-    font-size: 25px;
-    color:var(--skin-color);
-}
-.contact .contact-info-item h4{
-    font-size: 18px;
-    font-weight: 700;
-    text-transform: capitalize;
-    margin: 15px 0 5px;
-}
-.contact .contact-info-item p{
-    font-size: 16px;
-    line-height: 25px;
-    color:var(--text-black-700);
-    font-weight: 400;
-}
-.contact .contact-form{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-.contact .contact-form .col-6{
-    flex: 0 0 50%;
-    max-width: 50%;
-}
-.contact .contact-form .col-12{
-    flex: 0 0 100%;
-    max-width: 100%;
-}
-.contact .contact-form .form-item{
-    margin-bottom: 30px;
-}
-.contact .contact-form .form-item .form-control{
-    width: 100%;
-    height: 50px;
-    border-radius: 25px;
-    background: var(--bg-black-100);
-    border: 1px solid var(--bg-black-50);
-    padding: 10px 25px;
-    font-size:  16px;
-    color: var(--text-black-700);
-    transition: all 0.3s ease;
-}
-.contact .contact-form .form-item .form-control:focus{
-    box-shadow: 0 0 20px rgba(48, 46, 77, 0.15);
-}
-.contact .contact-form .form-item textarea.form-control{
-    height: 140px;
-}
-.contact .contact-form .btn{
-    height: 50px;
-    padding: 0 50px;
-}
+
 @media(max-width:1199px){
     .aside{
         left: -270px;
