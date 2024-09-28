@@ -631,22 +631,23 @@ body.dark .gallery-container {
   background: linear-gradient(0deg, rgba(0, 0, 200, 0.1), rgba(0, 0, 200, 0)),
               linear-gradient(120deg, rgba(50, 150, 100, 0.2), rgba(0, 0, 100, 0));
   width: 100%;
-  height: 100%;
+  height: 600px;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0;
-  padding: 0;
+  padding: 0px;
   overflow: hidden;
 }
 
 /* Estilos para el contenedor dentro de #gustos */
 #gustos .container {
   position: relative;
-  width: 80vmin;
-  height: 80vmin;
+  width: 90vmin;
+  height: 90vmin;
   max-height: 600px;
+  padding: 0;
   max-width: 600px;
   overflow: hidden;
   border-radius: 20px;
