@@ -738,32 +738,31 @@ body.dark .gallery-container {
 /* Adjustments for small screens */
 @media (max-width: 768px) {
     .carousel-section .carousel {
-        width: 50%;
-        height: auto;
-        padding: 3px;
+        width: 100%; /* Usa todo el ancho del viewport */
+        height: auto; /* Ajusta la altura automáticamente */
+        padding: 3px; /* Espaciado alrededor del carrusel */
+        overflow: hidden; /* Oculta cualquier desbordamiento */
     }
 
     .carousel-section .carousel-images {
-        flex-direction: row;
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory; /* Ensures images snap into view one at a time */
+        display: flex;
+        flex-direction: row; /* Las imágenes están alineadas en fila */
+        overflow-x: auto; /* Permite desplazamiento horizontal */
+        scroll-snap-type: x mandatory; /* El desplazamiento se detiene en cada imagen */
+        -webkit-overflow-scrolling: touch; /* Suaviza el desplazamiento en pantallas táctiles */
+        scroll-behavior: smooth; /* Desplazamiento suave */
     }
+
     .carousel-section .carousel-images img {
-        width: 100vw; /* Full width of the viewport */
-        height: 35vh; /* Full height of the viewport */
-        object-fit: contain; /* Image is fully contained without cropping */
+        width: 100vw; /* La imagen ocupa todo el ancho del viewport */
+        height: 35vh; /* La imagen tiene una altura del 35% del viewport */
+        object-fit: contain; /* Evita cortar la imagen */
+        flex-shrink: 0; /* Previene que la imagen se encoja */
+        scroll-snap-align: center; /* Centra la imagen cuando se detiene el desplazamiento */
     }
 
-    .carousel-section .button {
-        padding: 6px;
-        font-size: 18px;
-    }
-
-    .carousel-section .carousel-buttons {
-        width: 100%;
-        top: 45%;
-    }
 }
+
 @media (max-width: 500px) {
     .carousel-section .carousel {
         width: 50%; /* Usa el 100% del ancho de la pantalla */
