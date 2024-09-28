@@ -704,7 +704,7 @@ body.dark .gallery-container {
 
 .carousel-section .carousel-images img {
     width: 100%; /* Image takes full width of container */
-    height: 10vh; /* Image takes full height of the viewport */
+    height: 50vh; /* Image takes full height of the viewport */
     object-fit: contain; /* Ensures the whole image is shown without being cropped */
     flex-shrink: 0; /* Prevents shrinking */
 }
@@ -712,7 +712,8 @@ body.dark .gallery-container {
 .carousel-section .carousel-buttons {
     position: absolute;
     top: 50%;
-    width: 100%;
+    width: calc(100% - 40px);
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     transform: translateY(-50%);
@@ -723,7 +724,7 @@ body.dark .gallery-container {
     background-color: rgba(213, 203, 203, 0.7);
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 30px;
     border-radius: 50%;
     font-size: 24px;
     transition: background-color 0.3s ease;
@@ -731,13 +732,13 @@ body.dark .gallery-container {
 
 .carousel-section .button:hover {
     background-color: rgba(255, 255, 255, 1);
-    padding: 2px;
+    padding: 25px;
 }
 
 /* Adjustments for small screens */
 @media (max-width: 768px) {
     .carousel-section .carousel {
-        width: 100%;
+        width: 80%;
         height: auto;
         padding: 3px;
     }
