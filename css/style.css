@@ -764,38 +764,43 @@ body.dark .gallery-container {
         top: 45%;
     }
 }
-@media (max-width: 500px){
-    .carousel-images {
-        display: flex;
-    }
+@media (max-width: 500px) {
     .carousel-section .carousel {
-        width: 50%;
-        height: auto;
-    }
-    .carousel-section .carousel-images {
-        flex-direction: row;
-        overflow-x: scroll; /* Desplazamiento horizontal en móviles */
-        scroll-snap-type: x mandatory; /* Permite un deslizamiento suave */
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory; /* Ensures images snap into view one at a time */
-    }
-    .carousel-section .carousel-images img {
-        width: 100vw; /* Full width of the viewport */
-        height: 25vh; /* Full height of the viewport */
-        object-fit: contain; /* Image is fully contained without cropping */
-        margin: 0 auto;
+        width: 50%; /* Usa el 100% del ancho de la pantalla */
+        height: auto; /* Ajusta la altura automáticamente */
+        overflow: hidden; /* Oculta el desbordamiento */
     }
 
-    .carousel-images img {
+    .carousel-section .carousel-images {
+        display: flex;
+        flex-direction: row; /* Alinea las imágenes horizontalmente */
+        overflow-x: auto; /* Habilita el desplazamiento horizontal */
+        scroll-snap-type: x mandatory; /* Ajuste de desplazamiento suave */
+        scroll-behavior: smooth; /* Desplazamiento suave */
+        -webkit-overflow-scrolling: touch; /* Habilita desplazamiento táctil */
+        touch-action: pan-x; /* Permite desplazamiento completo en el eje X */
+        width: 100%;
+        height: 100%; /* Asegura que el contenedor ocupe todo el espacio */
+    }
+
+    .carousel-section .carousel-images img {
+        width: 100vw; /* Usa todo el ancho del viewport */
+        height: auto; /* Mantiene la proporción de la imagen */
+        max-height: 40vh; /* Limita la altura máxima de la imagen */
+        object-fit: contain; /* Asegura que la imagen no se corte */
+        flex-shrink: 0; /* Previene que la imagen se encoja */
+        scroll-snap-align: center; /* Alinea la imagen al centro al desplazarse */
+    }
+
     .carousel-section .button {
         padding: 6px;
         font-size: 18px;
     }
+
     .carousel-section .carousel-buttons {
         width: 100%;
         height: auto;
         top: 45%;
-    }
     }
 }
 
