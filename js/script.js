@@ -1,27 +1,25 @@
 
 /*Carrusel */
-let currentIndex = 0;
-const images = document.querySelectorAll('.carousel-images img');
+const prevButton = document.getElementById('prev');
+const nextButton = document.getElementById('next');
+const carouselImages = document.querySelector('.carousel-images');
 
-function showSlide(index) {
-    if (index >= images.length) {
-        currentIndex = 0;
-    } else if (index < 0) {
-        currentIndex = images.length - 1;
-    } else {
-        currentIndex = index;
-    }
-    const offset = -currentIndex * 100; // Mueve el carrusel
-    document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
-}
+prevButton.addEventListener('click', () => {
+    carouselImages.scrollBy({
+        top: 0,
+        left: -window.innerWidth,
+        behavior: 'smooth'
+    });
+});
 
-function nextSlide() {
-    showSlide(currentIndex + 1);
-}
+nextButton.addEventListener('click', () => {
+    carouselImages.scrollBy({
+        top: 0,
+        left: window.innerWidth,
+        behavior: 'smooth'
+    });
+});
 
-function prevSlide() {
-    showSlide(currentIndex - 1);
-}
 /*Menu pequeño */
 document.addEventListener("DOMContentLoaded", () => {
     const navButtons = document.querySelectorAll(".tab-bar button");
@@ -46,5 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('resize', toggleNavBar); // Cambia la visibilidad en el cambio de tamaño
     toggleNavBar(); // Inicializa la visibilidad
 });
+
+/* */
 
 

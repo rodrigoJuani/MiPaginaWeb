@@ -981,7 +981,7 @@ body.dark .gallery-container {
 
     .carousel-section .carousel-images img {
         width: 100vw; /* La imagen ocupa todo el ancho del viewport */
-        height: 25vh; /* La imagen tiene una altura del 35% del viewport */
+        height: 35vh; /* La imagen tiene una altura del 35% del viewport */
         object-fit: contain; /* Evita cortar la imagen */
         flex-shrink: 0; /* Previene que la imagen se encoja */
         scroll-snap-align: center; /* Centra la imagen cuando se detiene el desplazamiento */
