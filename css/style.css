@@ -47,7 +47,7 @@ body.dark {
     height: 90px;
     background-color: #151519;
     box-shadow: inset 0 1.5px 0 0 #212126;
-    border-radius: 0px 31px 0px 41px;
+    border-radius: 0px;
     position: fixed; /* Mantiene la barra en una posición fija */
     bottom: 0; /* Coloca la barra en la parte inferior de la ventana */
     left: 0; /* Alinea la barra al lado izquierdo */
