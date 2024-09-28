@@ -981,7 +981,7 @@ body.dark .gallery-container {
 
     .carousel-section .carousel-images img {
         width: 100vw; /* La imagen ocupa todo el ancho del viewport */
-        height: 35vh; /* La imagen tiene una altura del 35% del viewport */
+        height: 25vh; /* La imagen tiene una altura del 35% del viewport */
         object-fit: contain; /* Evita cortar la imagen */
         flex-shrink: 0; /* Previene que la imagen se encoja */
         scroll-snap-align: center; /* Centra la imagen cuando se detiene el desplazamiento */
@@ -1023,7 +1023,7 @@ body.dark .gallery-container {
     .carousel-section .carousel-images img {
         width: 100vw; /* Usa todo el ancho del viewport */
         height: auto; /* Mantiene la proporción de la imagen */
-        max-height: 30vh; /* Limita la altura máxima de la imagen */
+        max-height: 20vh; /* Limita la altura máxima de la imagen */
         object-fit: contain; /* Asegura que la imagen no se corte */
         flex-shrink: 0; /* Previene que la imagen se encoja */
         scroll-snap-align: center; /* Alinea la imagen al centro al desplazarse */
