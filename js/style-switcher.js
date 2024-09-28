@@ -7,32 +7,29 @@ window.addEventListener("load", () => {
     colorChangeMessage.style.display = "block"; // Mostrar mensaje
     setTimeout(() => {
         colorChangeMessage.style.opacity = 1; // Mostrar con transición
-    }, 10); // Retraso para permitir que se aplique el estilo de display
+    }, 0); // Retraso para permitir que se aplique el estilo de display
 });
-
 styleSwitcherToggle.addEventListener("click", () => {
     styleSwitcher.classList.toggle("open");
 
-    // Mostrar el mensaje solo si el selector de estilo está cerrado
     if (!styleSwitcher.classList.contains("open")) {
         colorChangeMessage.style.display = "block"; // Mostrar mensaje
-        setTimeout(() => {
-            colorChangeMessage.style.opacity = 1; // Mostrar con transición
-        }, 10); // Retraso para permitir que se aplique el estilo de display
+        colorChangeMessage.style.opacity = 1; // Mostrar sin transición
     } else {
         colorChangeMessage.style.opacity = 0; // Ocultar el mensaje al abrir
         setTimeout(() => {
             colorChangeMessage.style.display = "none"; // Ocultar después de la transición
-        }, 500); // Espera la duración de la transición
+        }, 10); // Mantener este retraso si deseas una transición suave
     }
 });
+
 
 // Cuando se desplaza la pantalla, oculta el mensaje
 window.addEventListener("scroll", () => {
     colorChangeMessage.style.opacity = 0; // Ocultar el mensaje al deslizar
     setTimeout(() => {
         colorChangeMessage.style.display = "none"; // Ocultar después de la transición
-    }, 500); // Espera la duración de la transición
+    }, 0); // Espera la duración de la transición
 });
 
 const alternateStyles = document.querySelectorAll(".alternate-style");
