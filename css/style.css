@@ -966,7 +966,7 @@ body.dark .gallery-container {
     .carousel-section .carousel {
         width: 100%; /* Usa todo el ancho del viewport */
         height: auto; /* Ajusta la altura automáticamente */
-        padding: 3px; /* Espaciado alrededor del carrusel */
+        padding: auto; /* Espaciado alrededor del carrusel */
         overflow: hidden; /* Oculta cualquier desbordamiento */
     }
 
@@ -985,6 +985,17 @@ body.dark .gallery-container {
         object-fit: contain; /* Evita cortar la imagen */
         flex-shrink: 0; /* Previene que la imagen se encoja */
         scroll-snap-align: center; /* Centra la imagen cuando se detiene el desplazamiento */
+    }
+    
+    .carousel-section .button {
+        padding: 6px;
+        font-size: 18px;
+    }
+
+    .carousel-section .carousel-buttons {
+        width: 100%;
+        height: auto;
+        top: 45%;
     }
 
 }
