@@ -764,6 +764,41 @@ body.dark .gallery-container {
         top: 45%;
     }
 }
+@media (max-width: 500px){
+    .carousel-images {
+        display: flex;
+    }
+    .carousel-section .carousel {
+        width: 50%;
+        height: auto;
+    }
+    .carousel-section .carousel-images {
+        flex-direction: row;
+        overflow-x: scroll; /* Desplazamiento horizontal en móviles */
+        scroll-snap-type: x mandatory; /* Permite un deslizamiento suave */
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory; /* Ensures images snap into view one at a time */
+    }
+    .carousel-section .carousel-images img {
+        width: 100vw; /* Full width of the viewport */
+        height: 25vh; /* Full height of the viewport */
+        object-fit: contain; /* Image is fully contained without cropping */
+        margin: 0 auto;
+    }
+
+    .carousel-images img {
+    .carousel-section .button {
+        padding: 6px;
+        font-size: 18px;
+    }
+    .carousel-section .carousel-buttons {
+        width: 100%;
+        height: auto;
+        top: 45%;
+    }
+    }
+}
+
 
 
 
