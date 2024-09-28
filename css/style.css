@@ -749,7 +749,7 @@ body.dark .gallery-container {
     }
     .carousel-section .carousel-images img {
         width: 100vw; /* Full width of the viewport */
-        height: 45vh; /* Full height of the viewport */
+        height: 35vh; /* Full height of the viewport */
         object-fit: contain; /* Image is fully contained without cropping */
     }
 
