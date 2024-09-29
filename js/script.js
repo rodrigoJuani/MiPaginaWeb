@@ -45,6 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
     toggleNavBar(); // Inicializa la visibilidad
 });
 
-/* */
+/*Armadura*/
+
 
 

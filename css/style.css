@@ -1133,7 +1133,8 @@ body.dark .gallery-container {
     padding: 20px; /* Espacio alrededor de la sección */
 }
 
-.row {
+.TTT {
+    position: relative;
     display: flex; /* Activa Flexbox */
     flex-wrap: wrap; /* Permite que los elementos se ajusten a la siguiente línea si no hay espacio */
     justify-content: center; /* Centra los elementos horizontalmente */
