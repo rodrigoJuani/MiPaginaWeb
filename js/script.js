@@ -33,7 +33,7 @@ function updateCarousel() {
 // Escucha los eventos de los botones
 document.getElementById('prev').addEventListener('click', prevSlide);
 document.getElementById('next').addEventListener('click', nextSlide);
-/*Cuan es peq */
+/*Cuan es pequeño el carrusel */
 function enableSwipeForSmallScreens() {
     const carouselImages = document.querySelector('.carousel-images');
     let startX;
@@ -87,6 +87,21 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*Armadura*/
+document.querySelectorAll('.fotArmdura .post').forEach(post => {
+    let touched = false;
+
+    post.addEventListener('touchstart', function () {
+        // Alternar el estado de la clase para la animación
+        if (!touched) {
+            post.classList.add('active');
+            touched = true;
+        } else {
+            post.classList.remove('active');
+            touched = false;
+        }
+    });
+});
+
 
 
 

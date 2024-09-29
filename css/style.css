@@ -1285,7 +1285,17 @@ body.dark .gallery-container {
   .fotArmdura ul li:hover:before {
     height: 18px;
   }
-  
+  .fotArmdura .post.active .header_post {
+    margin-top: -20px;
+}
+
+.fotArmdura .post.active .body_post {
+    height: 50%;
+}
+
+.fotArmdura .post.active img {
+    transform: translateY(-10px) translateX(-5px) scale(.7);
+}
   @keyframes top {
     0% {
       opacity: 0;
