@@ -87,17 +87,12 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*Armadura*/
-// Detectar si el dispositivo es táctil
-const isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
-
-if (isTouchDevice) {
-    document.querySelectorAll('.fotArmdura .post').forEach(post => {
-        post.addEventListener('touchstart', function () {
-            // Alternar la clase 'active' para simular el hover en dispositivos táctiles
-            post.classList.toggle('active');
-        });
+document.querySelectorAll('.fotArmdura .post img').forEach(img => {
+    img.addEventListener('click', function () {
+        // Alterna la clase 'active' en el contenedor padre
+        this.closest('.post').classList.toggle('active');
     });
-}
+});
 
 
 
