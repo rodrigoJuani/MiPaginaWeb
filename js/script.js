@@ -87,20 +87,17 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*Armadura*/
-document.querySelectorAll('.fotArmdura .post').forEach(post => {
-    let touched = false;
+// Detectar si el dispositivo es táctil
+const isTouchDevice = 'ontouchstart' in window || navigator.msMaxTouchPoints;
 
-    post.addEventListener('touchstart', function () {
-        // Alternar el estado de la clase para la animación
-        if (!touched) {
-            post.classList.add('active');
-            touched = true;
-        } else {
-            post.classList.remove('active');
-            touched = false;
-        }
+if (isTouchDevice) {
+    document.querySelectorAll('.fotArmdura .post').forEach(post => {
+        post.addEventListener('touchstart', function () {
+            // Alternar la clase 'active' para simular el hover en dispositivos táctiles
+            post.classList.toggle('active');
+        });
     });
-});
+}
 
 
 
