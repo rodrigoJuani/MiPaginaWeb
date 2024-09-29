@@ -87,10 +87,27 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 /*Armadura*/
-document.querySelectorAll('.fotArmdura .post img').forEach(img => {
-    img.addEventListener('click', function () {
-        // Alterna la clase 'active' en el contenedor padre
-        this.closest('.post').classList.toggle('active');
+let touchStartY = 0; // Para almacenar la posición Y del toque inicial
+
+document.querySelectorAll('.fotArmdura .post').forEach(post => {
+    post.addEventListener('touchstart', function (event) {
+        touchStartY = event.touches[0].clientY; // Captura la posición inicial del toque
+    });
+
+    post.addEventListener('touchmove', function (event) {
+        const touchCurrentY = event.touches[0].clientY; // Captura la posición actual del toque
+
+        // Comprueba si se desliza hacia abajo
+        if (touchCurrentY > touchStartY + 50) { // Deslizamiento hacia abajo
+            post.classList.add('active'); // Activa la clase para agrandar
+            event.preventDefault(); // Evita el comportamiento predeterminado
+        }
+    });
+
+    post.addEventListener('touchend', function () {
+        if (post.classList.contains('active')) {
+            post.classList.remove('active'); // Elimina la clase al soltar
+        }
     });
 });
 
