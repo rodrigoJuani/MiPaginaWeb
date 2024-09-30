@@ -1435,7 +1435,28 @@ body.dark .gallery-container {
     }
 }
 
-
+/*footer*/
+.footer {
+    background-color: #2c3e50; /* Color de fondo oscuro */
+    color: #ecf0f1; /* Color de texto claro */
+    text-align: center; /* Centra el contenido */
+    padding: 20px; /* Espaciado interno */
+    position: fixed; /* Fija el footer al fondo de la página */
+    bottom: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    font-family: 'Poppins', sans-serif; /* Estilo de fuente moderno */
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  }
+  
+  .footer-content p {
+    margin: 0; /* Elimina el margen predeterminado */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+  }
+  
+  .footer-content span {
+    font-weight: bold; /* Hace el año más llamativo */
+  }
+  
 
 
 

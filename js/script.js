@@ -1,4 +1,8 @@
 
+
+/*footer */
+
+
 /*Carrusel */
 const carouselImages = document.querySelector('.carousel-images');
 const images = document.querySelectorAll('.carousel-images img');
@@ -110,7 +114,5 @@ document.querySelectorAll('.fotArmdura .post').forEach(post => {
         }
     });
 });
-
-
 
 
